@@ -1,5 +1,5 @@
-🌍 UrbanNet
-AI-Powered Satellite Building Detection & Urban Footprint Extraction System
+# 🌍 UrbanNet  
+### AI-Powered Satellite Building Detection & Urban Footprint Extraction System
 
 UrbanNet is an end-to-end geospatial artificial intelligence pipeline designed for automated building footprint extraction from multispectral satellite imagery.
 
@@ -7,203 +7,174 @@ The system integrates cloud-based remote sensing, supervised machine learning, a
 
 Developed using Sentinel-2 imagery (2023) over Delhi NCR, UrbanNet demonstrates how modern AI techniques can be fused with GIS workflows for high-resolution urban mapping and spatial analytics.
 
-🚀 Project Overview
+---
 
-UrbanNet implements a three-stage AI-driven geospatial workflow:
+# 🚀 Project Overview
 
-Cloud-Based Multispectral Feature Engineering (Google Earth Engine)
+UrbanNet implements a multi-stage AI-driven geospatial workflow:
 
-Supervised Machine Learning Classification (Random Forest)
-
-Deep Learning Semantic Segmentation (U-Net, PyTorch)
-
-GIS-Based Spatial Analysis and Vectorization (QGIS)
+1. **Cloud-Based Multispectral Feature Engineering (Google Earth Engine)**
+2. **Supervised Machine Learning Classification (Random Forest)**
+3. **Deep Learning Semantic Segmentation (U-Net, PyTorch)**
+4. **GIS-Based Spatial Analysis and Vectorization (QGIS)**
 
 The system moves beyond traditional spectral thresholding by integrating:
 
-Spectral indices (NDVI, NDWI, NDBI)
-
-Texture-based spatial features (GLCM)
-
-Ensemble classification
-
-Convolutional Neural Network segmentation
+- Spectral indices (NDVI, NDWI, NDBI)
+- Texture-based spatial features (GLCM)
+- Ensemble classification
+- Convolutional Neural Network segmentation
 
 The result is a scalable and reproducible pipeline for automated urban building detection.
 
-🧠 Technical Architecture
-🔹 Stage 1 — Geospatial Data Processing (Google Earth Engine)
+---
 
-Sentinel-2 Surface Reflectance (COPERNICUS/S2_SR_HARMONIZED)
+# 🧠 Technical Architecture
 
-Year: 2023
+## 🔹 Stage 1 — Geospatial Data Processing (Google Earth Engine)
 
-Cloud Filtering: < 10%
+- **Dataset:** Sentinel-2 Surface Reflectance (COPERNICUS/S2_SR_HARMONIZED)
+- **Year:** 2023
+- **Cloud Filtering:** < 10%
+- **Composite Method:** Median composite
 
-Median Composite Generation
+### Feature Engineering
 
-Feature Engineering
-
-NDVI (Vegetation separation)
-
-NDWI (Water separation)
-
-NDBI (Built-up enhancement)
-
-GLCM Texture (Spatial variability enhancement)
+- NDVI (Vegetation separation)
+- NDWI (Water separation)
+- NDBI (Built-up enhancement)
+- GLCM Texture (Spatial variability enhancement)
 
 A multi-dimensional feature stack was constructed to improve class separability in complex urban environments.
 
-🔹 Stage 2 — Machine Learning Classification
+---
 
-Algorithm: Random Forest
-Trees: 70
-Input Features: 9 spectral & derived features
-Classes: Buildings, Vegetation, Water, Roads
+## 🔹 Stage 2 — Machine Learning Classification
 
-Performance Metrics
+- **Algorithm:** Random Forest  
+- **Trees:** 70  
+- **Input Features:** 9 spectral & derived features  
+- **Classes:** Buildings, Vegetation, Water, Roads  
 
-Overall Accuracy: 93.7%
+### Performance Metrics
 
-Kappa Coefficient: 0.91+
+- **Overall Accuracy:** 93.7%
+- **Kappa Coefficient:** 0.91+
 
 Random Forest provided efficient, cloud-scalable land cover classification and served as a baseline for comparison against deep learning.
 
-🔹 Stage 3 — Deep Learning Semantic Segmentation
+---
 
-Framework: PyTorch
-Architecture: U-Net
-Task: Binary segmentation (Building vs Background)
-Patch Size: 256 × 256
-Total Samples: 897
+## 🔹 Stage 3 — Deep Learning Semantic Segmentation
 
-Training Configuration
+- **Framework:** PyTorch  
+- **Architecture:** U-Net  
+- **Task:** Binary segmentation (Building vs Background)  
+- **Patch Size:** 256 × 256  
+- **Total Samples:** 897  
 
-Loss Function: Binary Cross Entropy (BCE)
+### Training Configuration
 
-Optimizer: Adam
+- **Loss Function:** Binary Cross Entropy (BCE)
+- **Optimizer:** Adam
+- **Learning Rate:** 0.001
+- **Epochs:** 8
+- **Batch Size:** 8
 
-Learning Rate: 0.001
+### Evaluation Metrics
 
-Epochs: 8
-
-Batch Size: 8
-
-Evaluation Metrics
-
-Intersection over Union (IoU)
-
-Dice Score
-
-Validation Loss
+- Intersection over Union (IoU)
+- Dice Score
+- Validation Loss
 
 The U-Net model improved boundary precision and pixel-level building delineation compared to pixel-based classification.
 
-🔹 Stage 4 — GIS Spatial Analysis (QGIS)
+---
 
-Raster → Vector Conversion (Polygonize)
+## 🔹 Stage 4 — GIS Spatial Analysis (QGIS)
 
-Built-up Area Calculation
-
-Urban Density Estimation
-
-Cartographic Map Layout
+- Raster → Vector Conversion (Polygonize)
+- Built-up Area Calculation
+- Urban Density Estimation
+- Cartographic Map Layout
 
 This stage translated AI outputs into actionable geospatial analytics.
 
-📊 Key Results
-Component	Performance
-Random Forest Accuracy	93.7%
-Deep Learning IoU	High Overlap
-Built-up Area Extraction	Automated vector output
-Output Format	GIS-ready shapefiles
+---
+
+# 📊 Key Results
+
+| Component | Performance |
+|-----------|------------|
+| Random Forest Accuracy | 93.7% |
+| Deep Learning Segmentation | High boundary precision |
+| Built-up Area Extraction | Automated vector output |
+| Output Format | GIS-ready shapefiles |
 
 UrbanNet demonstrates that hybrid ML + DL approaches significantly improve spatial precision compared to traditional classification methods.
 
-🛠 Tech Stack
-Geospatial
+---
 
-Google Earth Engine (JavaScript API)
+# 🛠 Tech Stack
 
-Sentinel-2 MSI
+## 🌐 Geospatial
+- Google Earth Engine (JavaScript API)
+- Sentinel-2 MSI
+- QGIS
 
-QGIS
+## 🤖 Machine Learning
+- Random Forest (GEE)
 
-Machine Learning
+## 🧠 Deep Learning
+- PyTorch
+- Custom U-Net Architecture
+- NumPy
+- Rasterio
+- Matplotlib
 
-Random Forest (GEE)
 
-Deep Learning
+---
 
-PyTorch
-
-Custom U-Net Architecture
-
-NumPy
-
-Rasterio
-
-Matplotlib
-
-📂 Repository Structure
-UrbanNet/
-│
-├── README.md
-├── requirements.txt
-│
-├── gee/
-│   └── urban_net_workflow.js
-│
-├── deep_learning/
-│   ├── dataset.py
-│   ├── model_unet.py
-│   ├── train.py
-│   ├── metrics.py
-│   └── predict.py
-│
-├── results/
-│   ├── rf_classification.png
-│   ├── confusion_matrix.png
-│   ├── training_curve.png
-│   └── segmentation_output.png
-│
-└── report/
-    └── UrbanNet_Project_Report.pdf
-
-🔍 Applications
+# 🔍 Applications
 
 UrbanNet can be extended for:
 
-Smart city infrastructure mapping
+- Smart city infrastructure mapping
+- Urban growth monitoring
+- Disaster damage assessment
+- Informal settlement detection
+- Climate-resilient urban planning
+- Infrastructure density estimation
 
-Urban growth monitoring
+---
 
-Disaster damage assessment
+# 📈 Future Enhancements
 
-Informal settlement detection
+- Incorporation of higher-resolution imagery (PlanetScope, WorldView)
+- Transfer learning using pre-trained segmentation backbones
+- Multi-temporal urban growth analysis
+- Instance segmentation (Mask R-CNN)
+- Deployment as a web-based urban analytics dashboard
 
-Climate-resilient urban planning
+---
 
-Infrastructure density estimation
+# 📜 License
 
-📈 Future Enhancements
+This project is licensed under the **MIT License**.
 
-Incorporation of higher-resolution imagery (PlanetScope, WorldView)
+---
 
-Transfer learning using pre-trained segmentation backbones
+# 👤 Author
 
-Multi-temporal urban growth analysis
+**Sarthak Mehta**  
+B.Tech Computer Science & Engineering  
+Dr. B.R. Ambedkar National Institute of Technology Jalandhar  
 
-Instance segmentation (Mask R-CNN)
+---
 
-Deployment as a web-based urban analytics dashboard
+# ⭐ Project Summary
 
-📜 License
+UrbanNet is a hybrid geospatial AI system integrating cloud-based remote sensing, ensemble machine learning, and convolutional neural network segmentation for automated building footprint extraction from satellite imagery.
 
-This project is licensed under the MIT License.
 
-👤 Author
 
-Sarthak Mehta
-B.Tech Computer Science & Engineering
-Dr. B.R. Ambedkar National Institute of Technology Jalandhar
