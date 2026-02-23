@@ -3,7 +3,7 @@
 ![GEE](https://img.shields.io/badge/GoogleEarthEngine-Geospatial-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-# 🌍 UrbanNet  
+# UrbanNet  
 ### AI-Powered Satellite Building Detection & Urban Footprint Extraction System
 
 UrbanNet is an end-to-end geospatial artificial intelligence pipeline designed for automated building footprint extraction from multispectral satellite imagery.
@@ -14,7 +14,7 @@ Developed using Sentinel-2 imagery (2023) over Delhi NCR, UrbanNet demonstrates 
 
 ---
 
-# 🚀 Project Overview
+# Project Overview
 
 UrbanNet implements a multi-stage AI-driven geospatial workflow:
 
@@ -34,7 +34,7 @@ The result is a scalable and reproducible pipeline for automated urban building 
 
 ---
 
-# 🧠 Technical Architecture
+# Technical Architecture
 
 ## 🔹 Stage 1 — Geospatial Data Processing (Google Earth Engine)
 
@@ -120,17 +120,17 @@ UrbanNet demonstrates that hybrid ML + DL approaches significantly improve spati
 
 ---
 
-# 🛠 Tech Stack
+# Tech Stack
 
-## 🌐 Geospatial
+## Geospatial
 - Google Earth Engine (JavaScript API)
 - Sentinel-2 MSI
 - QGIS
 
-## 🤖 Machine Learning
+## Machine Learning
 - Random Forest (GEE)
 
-## 🧠 Deep Learning
+## Deep Learning
 - PyTorch
 - Custom U-Net Architecture
 - NumPy
@@ -140,7 +140,7 @@ UrbanNet demonstrates that hybrid ML + DL approaches significantly improve spati
 
 ---
 
-# 🔍 Applications
+# Applications
 
 UrbanNet can be extended for:
 
@@ -153,7 +153,7 @@ UrbanNet can be extended for:
 
 ---
 
-# 📈 Future Enhancements
+# Future Enhancements
 
 - Incorporation of higher-resolution imagery (PlanetScope, WorldView)
 - Transfer learning using pre-trained segmentation backbones
@@ -163,13 +163,13 @@ UrbanNet can be extended for:
 
 ---
 
-# 📜 License
+# License
 
 This project is licensed under the **MIT License**.
 
 ---
 
-# 👤 Author
+# Author
 
 **Sarthak Mehta**  
 B.Tech Computer Science & Engineering  
@@ -177,7 +177,7 @@ Dr. B.R. Ambedkar National Institute of Technology Jalandhar
 
 ---
 
-# ⭐ Project Summary
+# Project Summary
 
 UrbanNet is a hybrid geospatial AI system integrating cloud-based remote sensing, ensemble machine learning, and convolutional neural network segmentation for automated building footprint extraction from satellite imagery.
 
