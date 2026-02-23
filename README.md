@@ -1,3 +1,8 @@
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red)
+![GEE](https://img.shields.io/badge/GoogleEarthEngine-Geospatial-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 # 🌍 UrbanNet  
 ### AI-Powered Satellite Building Detection & Urban Footprint Extraction System
 
